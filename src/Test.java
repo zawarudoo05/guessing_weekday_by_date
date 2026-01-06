@@ -13,7 +13,6 @@ public class Test {
         System.out.print("Year: ");
         int inputYear=scanner.nextInt();
         Date inputDate= new Date(inputDay,inputMonth,inputYear);
-        System.out.println(" wait for me please, I suck at math");
         AnswerDay guess = new AnswerDay(inputDate);
         System.out.println("was that day by any chance a : "+ guess.getFinalanswer()+ " ?");
 
