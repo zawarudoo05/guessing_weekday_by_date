@@ -54,26 +54,15 @@ public class Doomsday {
     }
     private Day switchDoomsdayAfter2000(int doomsdayNumber){
         Day realDoomdsay = Day.TUSEDAY;
-        switch (doomsdayNumber){
-            case 1:
-                realDoomdsay=Day.WEDNESDAY;
-                break;
-            case 2:
-                realDoomdsay=Day.THURSDAY;
-                break;
-            case 3:
-                realDoomdsay=Day.FRIDAY;
-                break;
-            case 4:
-                realDoomdsay=Day.SATURDAY;
-                break;
-            case 5:
-                realDoomdsay=Day.SUNDAY;
-                break;
-            case 6:
-                realDoomdsay=Day.MONDAY;
-                break;
-        }
+        realDoomdsay = switch (doomsdayNumber) {
+            case 1 -> Day.WEDNESDAY;
+            case 2 -> Day.THURSDAY;
+            case 3 -> Day.FRIDAY;
+            case 4 -> Day.SATURDAY;
+            case 5 -> Day.SUNDAY;
+            case 6 -> Day.MONDAY;
+            default -> realDoomdsay;
+        };
         return realDoomdsay;
     }
     public Day getDoomsday(){
