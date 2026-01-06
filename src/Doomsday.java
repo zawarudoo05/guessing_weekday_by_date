@@ -15,8 +15,7 @@ public class Doomsday {
             Day realDoomsday = after1900doomsday(doomsdayYear);
             return realDoomsday;
         }
-        Day friday = Day.FRIDAY;
-        return friday;
+        else return Day.WEDNESDAY;
     }
     private Day after2000doomsday(int doomsdayYear){
         Day realDoomsday = Day.TUSEDAY;
